@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fitness Tracker</title>
+<style>
+body { font-family:sans-serif; background:linear-gradient(to right,#43cea2,#185a9d); color:white; text-align:center; margin:0; padding:0; }
+header { padding:20px; font-size:24px; font-weight:bold; }
+section { background:rgba(0,0,0,0.5); max-width:500px; margin:20px auto; padding:20px; border-radius:10px; }
+input, button { padding:10px; margin:5px; font-size:16px; border-radius:5px; border:none; }
+button:hover { background:white; color:#43cea2; cursor:pointer; }
+#results { font-weight:bold; margin-top:15px; }
+</style>
+</head>
+<body>
+<header>🏃 Fitness Tracker</header>
+
+<section>
+<h2>Daily Water Intake Tracker</h2>
+<input type="number" id="water" placeholder="Liters drank today">
+<br>
+<button onclick="trackWater()">Track</button>
+<p id="results"></p>
+</section>
+
+<div style="margin:20px;">
+<button onclick="alert('Support me!')">💰 Donate / Support</button>
+<p>Ad placeholder</p>
+</div>
+
+<script>
+function trackWater(){
+    let liters=parseFloat(document.getElementById("water").value)||0;
+    document.getElementById("results").innerText=`💧 You drank ${liters} liters today!`;
+}
+</script>
+</body>
+</html>
